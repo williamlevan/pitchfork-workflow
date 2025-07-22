@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: ai-playlist-generator
+    runtime: docker
+    repo: https://github.com/your-username/your-repo-name
+    branch: main
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: ENVIRONMENT
+        value: production
