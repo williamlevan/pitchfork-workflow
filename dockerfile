@@ -13,6 +13,8 @@ RUN apt-get update && apt-get install -y \
     build-essential \
     curl \
     libssl-dev \
+    libpq-dev \
+    cython3 \
     && rm -rf /var/lib/apt/lists/*
 
 # Install dependencies
