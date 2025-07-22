@@ -51,6 +51,10 @@ def run_daily_job():
 def read_root():
     return {"message": "AI Playlist Generator Service", "status": "running"}
 
+@app.get("/health")
+def health_check():
+    return {"message": "My Daily Stuff Service", "status": "running"}
+
 @app.post("/jobs/trigger")
 async def trigger_job(background_tasks: BackgroundTasks):
     """Manually trigger the daily job"""
